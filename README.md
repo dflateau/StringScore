@@ -2,6 +2,10 @@
 
 StringScore is an Objective-C library which provides super fast fuzzy string matching/scoring. Based on the [JavaScript library of the same name](https://github.com/joshaven/string_score), by [Joshaven Potter](https://github.com/joshaven).
 
+This fork essentially merges in changes from several other forks as well as my own.
+* Unicode character support from [xhacker](https://github.com/xhacker/StringScore)
+* Core Graphics import from [sinclairtarget](https://github.com/sinclairtarget/StringScore)
+* Some performance improving changes from [w-m](https://github.com/w-m/StringScore)
 
 ## Using StringScore
 
