@@ -6,19 +6,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
-enum{
+typedef NS_OPTIONS(NSUInteger, NSStringScoreOptions) {
     NSStringScoreOptionNone                         = 1 << 0,
     NSStringScoreOptionFavorSmallerWords            = 1 << 1,
     NSStringScoreOptionReducedLongStringPenalty     = 1 << 2
 };
 
-typedef NSUInteger NSStringScoreOption;
-
 @interface NSString (Score)
 
 - (CGFloat) scoreAgainst:(NSString *)otherString;
 - (CGFloat) scoreAgainst:(NSString *)otherString fuzziness:(NSNumber *)fuzziness;
-- (CGFloat) scoreAgainst:(NSString *)otherString fuzziness:(NSNumber *)fuzziness options:(NSStringScoreOption)options;
+- (CGFloat) scoreAgainst:(NSString *)otherString fuzziness:(NSNumber *)fuzziness options:(NSStringScoreOptions)options;
+- (CGFloat) scoreWithOriginalAlgorithmAgainst:(NSString *)otherString fuzziness:(NSNumber *)fuzziness options:(NSStringScoreOptions)options;
+
+- (float)levenshteinDistanceToString:(NSString *)comparisonString;
 
 @end
