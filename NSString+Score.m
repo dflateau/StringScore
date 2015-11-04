@@ -38,8 +38,7 @@ unichar getCharacter(NSString *a, NSUInteger i) {
     return buffer[0];
 }
 
-- (CGFloat)scoreWithOriginalAlgorithmAgainst:(NSString *)anotherString fuzziness:(NSNumber *)fuzziness options:(NSStringScoreOptions)options{
-    if(!anotherString) return (CGFloat) 0.0f;
+- (CGFloat)scoreWithOriginalAlgorithmAgainst:(NSString *)anotherString fuzziness:(NSNumber *)fuzziness options:(NSStringScoreOptions)options {
     
     NSString *string = [[self.decomposedStringWithCanonicalMapping componentsSeparatedByCharactersInSet:self.invalidCharacterSet] componentsJoinedByString:@""];
     NSString *otherString = [[anotherString.decomposedStringWithCanonicalMapping componentsSeparatedByCharactersInSet:self.invalidCharacterSet] componentsJoinedByString:@""];
@@ -110,8 +109,6 @@ unichar getCharacter(NSString *a, NSUInteger i) {
 }
 
 - (CGFloat) scoreAgainst:(NSString *)anotherString fuzziness:(NSNumber *)fuzziness options:(NSStringScoreOptions)options{
-    if(!anotherString) return (CGFloat) 0.0f;
-    
     NSString *string = [[self.decomposedStringWithCanonicalMapping componentsSeparatedByCharactersInSet:self.invalidCharacterSet] componentsJoinedByString:@""];
     NSString *otherString = [[anotherString.decomposedStringWithCanonicalMapping componentsSeparatedByCharactersInSet:self.invalidCharacterSet] componentsJoinedByString:@""];
     

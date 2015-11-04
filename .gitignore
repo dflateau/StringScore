@@ -1,5 +1,6 @@
+.DS_Store
 # Xcode
-build/*
+build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -12,5 +13,6 @@ build/*
 !default.xcworkspace
 xcuserdata
 profile
+*.xccheckout
 *.moved-aside
-StringScoreExample/
+*.xcuserstate

@@ -16,11 +16,11 @@ typedef NS_OPTIONS(NSUInteger, NSStringScoreOptions) {
 
 @interface NSString (Score)
 
-- (CGFloat) scoreAgainst:(NSString *)otherString;
-- (CGFloat) scoreAgainst:(NSString *)otherString fuzziness:(NSNumber *)fuzziness;
-- (CGFloat) scoreAgainst:(NSString *)otherString fuzziness:(NSNumber *)fuzziness options:(NSStringScoreOptions)options;
-- (CGFloat) scoreWithOriginalAlgorithmAgainst:(NSString *)otherString fuzziness:(NSNumber *)fuzziness options:(NSStringScoreOptions)options;
+- (CGFloat) scoreAgainst:(nonnull NSString *)otherString;
+- (CGFloat) scoreAgainst:(nonnull NSString *)otherString fuzziness:(nullable NSNumber *)fuzziness;
+- (CGFloat) scoreAgainst:(nonnull NSString *)otherString fuzziness:(nullable NSNumber *)fuzziness options:(NSStringScoreOptions)options;
+- (CGFloat) scoreWithOriginalAlgorithmAgainst:(nonnull NSString *)otherString fuzziness:(nullable NSNumber *)fuzziness options:(NSStringScoreOptions)options;
 
-- (float)levenshteinDistanceToString:(NSString *)comparisonString;
+- (float)levenshteinDistanceToString:(nonnull NSString *)comparisonString;
 
 @end
